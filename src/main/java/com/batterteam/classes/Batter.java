@@ -2,7 +2,7 @@
  * Author Name: Batter Team
  * Date: 4/22/25
  * File Name: Batter.java
- * Last Update: 5/04/25 by Seth I.
+ * Last Update: 5/06/25 by James Furlough.
  * Program Description: Class that contains methods and information for a batter.
  */
 
