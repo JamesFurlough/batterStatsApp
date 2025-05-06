@@ -12,7 +12,8 @@ James F. - 4/22/25 - added variables, constructors, and gets/sets.
 Seth I. - 4/30/25 - Updated package from com.batterteam.main to com.batterteam.classes;
 Seth I. - 4/30/25 - Added variables and an associated constructor based on database variables - STILL NEED TO ADD GETTERS/SETTERS
 Seth I. - 5/04/25 - Added playerPosition variable as well as made all class variables private as they'll need to be accessed through a getter/setter
-Seth I. - 5/04/25 - Added setters and getters for newely added variables
+Seth I. - 5/04/25 - Added setters and getters for newly added variables
+James F. - 5/06/25 - fixed constructors to work with full name and first and last name. Also fixed minor mistakes in comments.
 
 
 ======================================
@@ -22,7 +23,7 @@ package com.batterteam.classes;
 
 public class Batter {
     
-    // Class Vriables
+    // Class Variables
     private int playerID;
     private String playerName;
     private String playerFirstName;
@@ -50,8 +51,10 @@ public class Batter {
     private int homePlate;
     
     // ============= Constructors =============
-    public Batter(String name) {
-        playerName = name;
+    public Batter(String firstName, String lastName) {
+        playerFirstName = firstName;
+        playerLastName = lastName;
+        playerName = firstName + ' ' + lastName;
         teamName = "";
         atBats = 0;
         hits = 0;
@@ -61,8 +64,10 @@ public class Batter {
         runsBattedIn = 0;
         battingAverage = 0;
     }
-    public Batter(String name, String team, int ab, int h, int hr, int so, int wk, int rbi) {
-        playerName = name;
+    public Batter(String firstName, String lastName, String team, int ab, int h, int hr, int so, int wk, int rbi) {
+        playerFirstName = firstName;
+        playerLastName = lastName;
+        playerName = firstName + ' ' + lastName;
         teamName = team;
         atBats = ab;
         hits = h;
@@ -76,6 +81,7 @@ public class Batter {
                     int doublesAmount, int triplesAmount, int tb, int bob, int sf, int sb, int hbp, int lob, int sb_att, int hp) {
         playerFirstName = firstName;
         playerLastName = lastName;
+        playerName = firstName + ' ' + lastName;
         teamName = team;
         playerPosition = playPos;
         dateOfGame = dayOfG;
